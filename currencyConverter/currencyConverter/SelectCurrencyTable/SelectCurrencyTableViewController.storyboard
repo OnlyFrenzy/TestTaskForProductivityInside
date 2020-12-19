@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2d8-yK-Jh6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Currency Table View Controller-->
+        <scene sceneID="28U-Ig-FHT">
+            <objects>
+                <viewController storyboardIdentifier="SelectCurrencyTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2d8-yK-Jh6" customClass="SelectCurrencyTableViewController" customModule="currencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CvW-Cy-4Qq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-qm-cQK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrencyCell" rowHeight="68" id="Hwf-j8-W3G" customClass="CurrencyCell" customModule="currencyConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hwf-j8-W3G" id="8iA-z6-mqX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edn-WU-7pN">
+                                                    <rect key="frame" x="40" y="23.5" width="230" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1fz-uQ-HVd">
+                                                    <rect key="frame" x="334" y="13.5" width="40" height="40"/>
+                                                    <color key="tintColor" red="0.99215686270000003" green="0.58039215690000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Jh7-SX-TXh"/>
+                                                        <constraint firstAttribute="width" constant="40" id="oHi-KN-zue"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgu-KI-tFF">
+                                                    <rect key="frame" x="274" y="23.5" width="40" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="wMb-LI-9JY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Edn-WU-7pN" firstAttribute="leading" secondItem="8iA-z6-mqX" secondAttribute="leadingMargin" constant="20" id="0d0-Yp-sn5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1fz-uQ-HVd" secondAttribute="trailing" constant="20" id="AXZ-yP-UXm"/>
+                                                <constraint firstItem="Qgu-KI-tFF" firstAttribute="centerY" secondItem="8iA-z6-mqX" secondAttribute="centerY" id="POC-4h-beg"/>
+                                                <constraint firstItem="Qgu-KI-tFF" firstAttribute="leading" secondItem="Edn-WU-7pN" secondAttribute="trailing" constant="4" id="oD6-gr-2uz"/>
+                                                <constraint firstItem="1fz-uQ-HVd" firstAttribute="leading" secondItem="Qgu-KI-tFF" secondAttribute="trailing" constant="20" id="sft-aZ-Aol"/>
+                                                <constraint firstItem="Edn-WU-7pN" firstAttribute="centerY" secondItem="8iA-z6-mqX" secondAttribute="centerY" id="vLd-qE-fv9"/>
+                                                <constraint firstItem="1fz-uQ-HVd" firstAttribute="centerY" secondItem="8iA-z6-mqX" secondAttribute="centerY" id="wRo-mt-KVo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="isSelectedImageView" destination="1fz-uQ-HVd" id="HyE-hc-o1Z"/>
+                                            <outlet property="valuteFullNameLabel" destination="Edn-WU-7pN" id="tcV-hl-01y"/>
+                                            <outlet property="valuteShortNameLabel" destination="Qgu-KI-tFF" id="JWw-Xy-yUS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qTB-ab-IsE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vgN-qm-cQK" firstAttribute="leading" secondItem="qTB-ab-IsE" secondAttribute="leading" id="cdD-nJ-BX9"/>
+                            <constraint firstItem="vgN-qm-cQK" firstAttribute="bottom" secondItem="qTB-ab-IsE" secondAttribute="bottom" id="mt8-U6-Mnz"/>
+                            <constraint firstItem="vgN-qm-cQK" firstAttribute="top" secondItem="qTB-ab-IsE" secondAttribute="top" id="uoa-4t-Frp"/>
+                            <constraint firstItem="vgN-qm-cQK" firstAttribute="trailing" secondItem="qTB-ab-IsE" secondAttribute="trailing" id="zfa-db-hEh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SelectCurrencyTableView" destination="vgN-qm-cQK" id="4b3-9b-Sxp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kai-0Q-hmd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.14492753623193" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
